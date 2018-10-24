@@ -68,8 +68,9 @@ jobs:
           name: Install awscli
           command: sudo pip install awscli
       - run:
+          # Deploy everything from the current directory to an S3 bucket
           name: Deploy to S3
-          command: aws s3 sync build s3://skaaning.ninja --delete --acl public-read
+          command: aws s3 sync ./ s3://skaaning.ninja --delete --acl public-read
 
 # Configure the workflows to only run the deployment on master
 workflows:
