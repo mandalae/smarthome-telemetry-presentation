@@ -39,5 +39,34 @@ jobs:
           paths:
               - ./
   test:
-      # run tests!
-      - run: npm test
+      docker:
+        # specify the version you desire here
+        - image: circleci/node:7.10
+
+        # Specify service dependencies here if necessary
+        # CircleCI maintains a library of pre-built images
+        # documented at https://circleci.com/docs/2.0/circleci-images/
+        # - image: circleci/mongo:3.4.4
+
+      working_directory: ~/repo
+
+      # Attach workspace with everything in it to run the tests
+      - attach_workspace:
+          at: ./
+
+      steps:
+          # run tests!
+          - run: npm test
+
+# Configure the workflows to only run the full thing on master
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
