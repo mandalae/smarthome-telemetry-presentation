@@ -63,7 +63,7 @@ workflows:
   build-deploy:
     jobs:
       - build
-      - deploy:
+      - test:
           requires:
             - build
           filters:
