@@ -50,11 +50,10 @@ jobs:
 
       working_directory: ~/repo
 
-      # Attach workspace with everything in it to run the tests
-      - attach_workspace:
-          at: ./
-
       steps:
+          # Attach workspace with everything in it to run the tests
+          - attach_workspace:
+              at: ./
           # run tests!
           - run: npm test
 
