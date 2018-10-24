@@ -33,5 +33,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+     # Persist everything to make sure we can run the tests in a separate job
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+              - ./
+  test:
       # run tests!
       - run: npm test
