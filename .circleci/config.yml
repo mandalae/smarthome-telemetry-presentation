@@ -73,25 +73,22 @@ jobs:
           command: aws s3 sync ./ s3://skaaning.ninja --delete --acl public-read
   acceptanceTests:
     docker:
-      - image: selenium/standalone-firefox
+      - image: circleci/ruby:2.5.1-node-browsers
     working_directory: ~/repo
     steps:
       - attach_workspace:
           at: ./
       - run: mkdir test-reports
       - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      - run:
           name: Start Selenium
-          command: export DISPLAY=:1 && /opt/bin/start-selenium-standalone.sh
+          command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
       - run:
-          name: Install verification keys for ruby
-          command: gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-      - run:
-          name: Install ruby
-          command: curl -sSL https://get.rvm.io | bash -s stable --ruby
-      - run:
           name: Run acceptance tests
-          command: source /home/seluser/.rvm/scripts/rvm && bundle install && export DISPLAY=:1 && ruby acceptance/suite.rb
+          command: bundle install && ruby acceptance/suite.rb
 
 
 # Configure the workflows to only run the deployment on master
