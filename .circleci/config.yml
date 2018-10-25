@@ -81,7 +81,7 @@ jobs:
       - run: mkdir test-reports
       - run:
           name: Start Selenium
-          command: export DISPLAY=:0 && /opt/bin/start-selenium-standalone.sh
+          command: export DISPLAY=:1 && /opt/bin/start-selenium-standalone.sh
           background: true
       - run:
           name: Install verification keys for ruby
@@ -91,7 +91,7 @@ jobs:
           command: curl -sSL https://get.rvm.io | bash -s stable --ruby
       - run:
           name: Run acceptance tests
-          command: source /home/seluser/.rvm/scripts/rvm && bundle install && export DISPLAY=:0 && ruby acceptance/suite.rb
+          command: source /home/seluser/.rvm/scripts/rvm && bundle install && export DISPLAY=:1 && ruby acceptance/suite.rb
 
 
 # Configure the workflows to only run the deployment on master
