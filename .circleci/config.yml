@@ -90,7 +90,7 @@ jobs:
           command: curl -sSL https://get.rvm.io | bash -s stable --ruby
       - run:
           name: Run acceptance tests
-          command: source /home/seluser/.rvm/scripts/rvm && ruby acceptance/suite.rb
+          command: source /home/seluser/.rvm/scripts/rvm && gem install && ruby acceptance/suite.rb
 
 
 # Configure the workflows to only run the deployment on master
