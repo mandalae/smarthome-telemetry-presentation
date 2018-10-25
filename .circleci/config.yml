@@ -84,7 +84,7 @@ jobs:
           background: true
       - run:
           name: Install ruby
-          command: sudo apt-get install ruby -y
+          command: sudo apt-get install ruby-full -y
       # Run the acceptance tests
       - run: ruby acceptance/suite.rb
 
