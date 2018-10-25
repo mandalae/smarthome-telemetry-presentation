@@ -89,10 +89,8 @@ jobs:
           name: Install ruby
           command: curl -sSL https://get.rvm.io | bash -s stable --ruby
       - run:
-          name: Enable ruby
-          command: source /home/seluser/.rvm/scripts/rvm
-      # Run the acceptance tests
-      - run: ruby acceptance/suite.rb
+          name: Run acceptance tests
+          command: source /home/seluser/.rvm/scripts/rvm && ruby acceptance/suite.rb
 
 
 # Configure the workflows to only run the deployment on master
