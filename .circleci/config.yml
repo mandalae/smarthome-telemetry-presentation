@@ -87,8 +87,11 @@ jobs:
           command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
           background: true
       - run:
+          name: Bundle install
+          command: bundle install
+      - run:
           name: Run acceptance tests
-          command: bundle install && ruby acceptance/suite.rb
+          command: ruby acceptance/suite.rb
 
 
 # Configure the workflows to only run the deployment on master
