@@ -74,6 +74,7 @@ jobs:
   acceptanceTests:
     docker:
       - image: selenium/standalone-chrome
+    working_directory: ~/repo
     steps:
       - attach_workspace:
           at: ./
