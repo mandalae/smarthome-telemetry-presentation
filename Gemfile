@@ -4,4 +4,5 @@ source 'https://rubygems.org'
 group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-core'
+  gem 'rspec-expectations'
 end
