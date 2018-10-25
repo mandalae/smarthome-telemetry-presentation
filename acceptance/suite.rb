@@ -3,9 +3,9 @@ require 'rspec/expectations'
 include RSpec::Matchers
 
 def setup
-  caps    = Selenium::WebDriver::Remote::Capabilities.send("chrome")
+  caps    = Selenium::WebDriver::Remote::Capabilities.send("firefox")
   # This url is the local access url of the docker container
-  @driver = Selenium::WebDriver.for(:remote, url: "http://127.0.0.1:4444/wd/hub", desired_capabilities: caps)
+  @driver = Selenium::WebDriver.for(:remote, url: "http://0.0.0.0:4444/wd/hub", desired_capabilities: caps)
 end
 
 def teardown

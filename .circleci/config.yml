@@ -73,7 +73,7 @@ jobs:
           command: aws s3 sync ./ s3://skaaning.ninja --delete --acl public-read
   acceptanceTests:
     docker:
-      - image: selenium/standalone-chrome
+      - image: selenium/standalone-firefox
     working_directory: ~/repo
     steps:
       - attach_workspace:
