@@ -19,6 +19,6 @@ end
 
 run do
   @driver.get 'http://skaaning.ninja'
-  expect(@driver.title).to eql "Panoptic culture"
+  expect(@driver.title).to eql "Panoptic culture - this is the wrong title"
   # @driver.save_screenshot('docker_image.png')
 end
