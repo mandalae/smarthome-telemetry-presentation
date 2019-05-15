@@ -79,7 +79,7 @@ jobs:
 # Configure the workflows to only run the deployment on master
 workflows:
   version: 2
-  build-deploy:
+  install-deploy:
     jobs:
       - install
       - test:
