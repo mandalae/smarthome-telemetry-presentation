@@ -18,7 +18,7 @@ def run
 end
 
 run do
-  @driver.get 'http://skaaning.ninja'
-  expect(@driver.title).to eql "Panoptic culture - this is the wrong title"
+  @driver.get 'http://devops.skaaning.ninja'
+  expect(@driver.title).to eql "Telemetry for your Smart Home"
   # @driver.save_screenshot('docker_image.png')
 end
