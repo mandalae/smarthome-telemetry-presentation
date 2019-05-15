@@ -27,33 +27,45 @@
 			<div class="slides">
 				<section data-markdown data-background-image="assets/city.jpg" data-background-opacity="0.3">
 					<textarea data-template>
-							# Who are we
-							<p class="fragment fade-in">**Chris Skaaning** - **Container Chris**</p>
+							# Who am I
+							<p class="fragment fade-in">**Chris Skaaning**</p>
 					</textarea>
 				</section>
 				<section data-markdown data-background-image="assets/mind.png" data-background-opacity="0.3">
 					<textarea data-template>
 							## The problem
+							<p class="fragment fade in">**Hive failures**</p>
 							<p class="fragment fade in">**Lots of devices and apps**</p>
 							<p class="fragment fade in">**No API for my SmartMeter**</p>
 							<p class="fragment fade in">**I wanted to have fun :)**</p>
+
+                            <aside class="notes">
+                                Hive failed quite a few times, where the thermostat would turn off.
+
+                                Smart devices: Hive, Philips Hue, TP Link smart plugs
+
+                                Can I track my energy usage using the Smart Meter?
+                            </aside>
 					</textarea>
 				</section>
 				<section>
 					<section data-markdown data-background-image="assets/sailing.png" data-background-opacity="0.3">
 						<textarea data-template>
-								## The journey to a better way
+								## Let's capture some metrics
 								<aside class="notes">
-									Callum talk abouts about his career being in the financial sector
-									and recognising that things have to change to make the work more enjoyable
+									Looked around for a Hive API first of all <br />
+                                    Discovered a quite extensive API with not just heating data but also power consumption for smart plugs.
+                                    <br />
+                                    <br />
+                                    Added Philips hue to the list to get a more complete list of devices turned on.
 								</aside>
 						</textarea>
 					</section>
 					<section data-markdown data-background-image="assets/map.png" data-background-opacity="0.3">
 						<textarea data-template>
-								## Map where you are
+								## Then how to store the metrics
 								<aside class="notes">
-									Kevin talks about value stream mapping and identifying blockers
+									InfluxDB and Grafana, first on Raspberry Pi's in my office. <br />
 								</aside>
 						</textarea>
 					</section>
