@@ -38,17 +38,16 @@
 							<p class="fragment fade in">**Lots of devices and apps**</p>
 							<p class="fragment fade in">**No API for my SmartMeter**</p>
 							<p class="fragment fade in">**I wanted to have fun :)**</p>
-
                             <aside class="notes">
-                                Hive failed quite a few times, where the thermostat would turn off.
-
-                                Smart devices: Hive, Philips Hue, TP Link smart plugs
-
-                                Can I track my energy usage using the Smart Meter?
+                                Hive failed often with no real way for me to diagnose or even tell when it failed, as it was through the night.<br />
+                                I have Hive Thermostats, bulbs and plugs, Philips hue lights, TP Link smart plugs
+                                <br />
+                                <br />
+                                There is no available API for my smartmeter, and it's really rubbish.
                             </aside>
 					</textarea>
 				</section>
-				<section>
+
 					<section data-markdown data-background-image="assets/sailing.png" data-background-opacity="0.3">
 						<textarea data-template>
 								## Let's capture some metrics
@@ -63,141 +62,32 @@
 					</section>
 					<section data-markdown data-background-image="assets/map.png" data-background-opacity="0.3">
 						<textarea data-template>
-								## Then how to store the metrics
+								## How to store the metrics
 								<aside class="notes">
 									InfluxDB and Grafana, first on Raspberry Pi's in my office. <br />
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/lego.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Start small
-								<aside class="notes">
-									Callum talks about celebrating small wins and picking immediate targets
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/paths.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Multiple paths and multiple tools
-								<aside class="notes">
-									Kevin talks about being adaptable and be open to change mid stream
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/tools.png" data-background-size="60%">
-					</section>
-					<section data-markdown data-background-image="assets/incomplete.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## You're never really done
-								<aside class="notes">
-									Kevin talks about selling the idea of a never ending journey
-								</aside>
-						</textarea>
-					</section>
-				</section>
-				<section>
-					<section data-markdown data-background-image="assets/crowd.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Recognizing the mindset
-								<aside class="notes">
-									Callum talks about how to best identify someone with the best mindset and techniques to use
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/wall.png" data-background-opacity="0.3">
-						<textarea data-template>
-								## Learning to challenge our thinking
-								<aside class="notes">
-									Kevin talks about life experience within the firm and blame Culture
-									and that there's no solution that fits all
+                                    Then on AWS because I realised that I have unused credits on there that get renewed and scrapped every month anyway.<br />
 								</aside>
 						</textarea>
 					</section>
 					<section data-markdown data-background-image="assets/fire.jpg" data-background-opacity="0.3">
 						<textarea data-template>
-								## Learning to challenge other's thinking
-								<aside class="notes">
-									Callum talks about fighting back against nonsense requirements
-									about helping not strictly techies understand the value of a certain stream of work
-									or why seperation of duties can be a huge blocker
-								</aside>
+								## Demo time
+
 						</textarea>
 					</section>
-				</section>
-				<section>
-					<section data-markdown data-background-image="assets/class.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Keep learning
-								<aside class="notes">
-									Kevin goes over about keeping your self motivated to learn and pick up new skillsets
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/stamina.png" data-background-opacity="0.3">
-						<textarea data-template>
-								## Keep pushing for change
-								<aside class="notes">
-									Callum talks about lulls and change, and also don't be afraid to let things die.
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/failure.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Embrace and understand failure
-								<aside class="notes">
-									Kev talks about safety culture and blame fre post-mortems and retro everything.
-								</aside>
-						</textarea>
-					</section>
+            <section data-background-image="assets/paths.jpg" data-background-opacity="0.3">
+                <h1>The stack</h1>
+                <ul>
+                    <li><a href="https://hub.docker.com/r/grafana/grafana/" style="color: #6ba1ff; font-weight: bold;">Grafana</a></li>
+                    <li><a href="https://hub.docker.com/_/influxdb/" style="color: #6ba1ff; font-weight: bold;">InfluxDB</a></li>
+                    <li><a href="https://github.com/mandalae/hive-data" style="color: #6ba1ff; font-weight: bold;">Hive Data</a></li>
+                    <li><a href="https://grafana.com/dashboards/10188" style="color: #6ba1ff; font-weight: bold;">The Dashboard</a></li>
+                </ul>
 			</section>
-			<section data-markdown data-background-image="assets/road.jpg" data-background-opacity="0.3">
-				<textarea data-template>
-						## Where do we go from here?
-						- Keep the drive relevant
-						- Keep the message positive
-						- Keep delivering business value from autonomy
-						<aside class="notes">
-							Open with Callum talking about culture first and then Callum follows with the tools first approach
-						</aside>
-				</textarea>
-			</section>
-			<section data-markdown data-background-image="assets/notes.png" data-background-opacity="0.3">
-				<textarea data-template>
-						## Things to follow
-						- Always improve the way you work
-						- Keep your CICD pipeline upto date with your code base and **not** seperate
-						- Don't have a permanent "DevOps" team
-						<aside class="notes">
-							Kevin goes on about SRE and why you should always step in the right direction
-							Kevin goes on about the pipelines and how killing something is a good idea
-						</aside>
-				</textarea>
-			</section>
-			<section data-markdown data-background-image="assets/poly.jpg" data-background-opacity="0.3">
-				<textarea data-template>
-						## The current state of DevOps
-						[Puppet - State of DevOps report 2018](https://puppet.com/resources/whitepaper/state-of-devops-report)
 
-						Groups            |  Adoption
-						:-------------------------:|:-------------------------:
-						![groups](assets/groups.png)  |  ![adoption](assets/adoption.png)
-
-						<aside class="notes">
-							Callum starts with an overview of the devops report
-							Kevin follows up with the frozen middle discussion and how the SRE model doesn't fit everyone
-						</aside>
-				</textarea>
-			</section>
-			<section data-markdown data-background-image="assets/poly.jpg" data-background-opacity="0.3">
-				<textarea data-template>
-						## QA?
-
-						![linkedin](assets/linkedin.png)/chris-skaaning  |  ![linkedin](assets/linkedin.png)/mark-winter
-						:-------------------------:|:-------------------------:
-						![Chris](assets/callum.jpeg)  |  ![Mark](assets/kevin.jpeg)
-
-				</textarea>
+			<section data-background-image="assets/poly.jpg" data-background-opacity="0.3">
+                <h1>QA?</h1>
+                <p><a href="http://devops.skaaning.ninja" style="color: #6ba1ff; font-weight: bold;">http://devops.skaaning.ninja</a></p>
 			</section>
 			</div>
 		</div>
