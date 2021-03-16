@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Monitoring and Telemetry for my Smart Home!</title>
+		<title>Making my home smarter through Technology</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -25,72 +25,77 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown data-background-image="assets/city.jpg" data-background-opacity="0.3">
+				<section data-markdown data-background-image="assets/smart-home.jpeg" data-background-opacity="0.3">
 					<textarea data-template>
-							## Monitoring and Telemetry for my Smart Home!
-							<p class="fragment fade-in">**Chris Skaaning**</p>
+							## Making my home smarter through Technology
+							<p class="fragment">**Chris Skaaning**</p>
 					</textarea>
 				</section>
-				<section data-markdown data-background-image="assets/mind.png" data-background-opacity="0.3">
+				<section data-markdown data-background-image="assets/complicated.jpeg" data-background-opacity="0.3">
 					<textarea data-template>
-							## The problem
-							<p class="fragment fade in">**Hive failures**</p>
-							<p class="fragment fade in">**Lots of devices and apps**</p>
-							<p class="fragment fade in">**No API for my SmartMeter**</p>
-							<p class="fragment fade in">**I wanted to have fun :)**</p>
-                            <aside class="notes">
-                                Hive failed often with no real way for me to diagnose or even tell when it failed, as it was through the night.<br />
-                                I have Hive Thermostats, bulbs and plugs, Philips hue lights, TP Link smart plugs
-                                <br />
-                                <br />
-                                There is no available API for my smartmeter, and it's really rubbish.
-                            </aside>
+							## Lots of different systems
+							<p class="fragment fade in">**Amazon Echo**</p>
+							<p class="fragment fade in">**Philips Hue bulbs and plugs**</p>
+							<p class="fragment fade in">**Hive plugs and bulbs**</p>
+                            <p class="fragment fade in">**Hive heating system**</p>
+                            <p class="fragment fade in">**Nest cameras and smoke detectors**</p>
+							<p class="fragment fade in">**A number of Raspberry Pis**</p>
 					</textarea>
 				</section>
+				<section data-markdown data-background-image="assets/hue.jpeg" data-background-opacity="0.3">
+                    <textarea data-template>
+                        ## Lots of devices
 
-					<section data-markdown data-background-image="assets/sailing.png" data-background-opacity="0.3">
-						<textarea data-template>
-								## Let's capture some metrics
-								<aside class="notes">
-									Looked around for a Hive API first of all <br />
-                                    Discovered a quite extensive API with not just heating data but also power consumption for smart plugs.
-                                    <br />
-                                    <br />
-                                    Added Philips hue to the list to get a more complete list of devices turned on.
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/map.png" data-background-opacity="0.3">
-						<textarea data-template>
-								## How to store the metrics
-								<aside class="notes">
-									InfluxDB and Grafana, first on Raspberry Pi's in my office. <br />
-                                    Then on AWS because I realised that I have unused credits on there that get renewed and scrapped every month anyway.<br />
-								</aside>
-						</textarea>
-					</section>
-					<section data-markdown data-background-image="assets/fire.jpg" data-background-opacity="0.3">
-						<textarea data-template>
-								## Demo time
+                        <p>69 active Hue devices</p>
+                        <p>2 hue bridges</p>
+                        <p>10 hive plugs, a few lights and a heating system</p>
+                    </textarea>
+				</section>
+                <section data-markdown data-background-image="assets/charts.jpeg" data-background-opacity="0.3">
+                    <textarea data-template>
+                        ## Information about everything
 
-						</textarea>
-					</section>
-            <section data-background-image="assets/paths.jpg" data-background-opacity="0.3">
-                <h1>The stack</h1>
-                <ul>
-                    <li><a href="https://hub.docker.com/r/grafana/grafana/" style="color: #6ba1ff; font-weight: bold;">Grafana</a></li>
-                    <li><a href="https://hub.docker.com/_/influxdb/" style="color: #6ba1ff; font-weight: bold;">InfluxDB</a></li>
-                    <li><a href="https://github.com/mandalae/hive-data" style="color: #6ba1ff; font-weight: bold;">Hive Data</a></li>
-                    <li><a href="https://grafana.com/dashboards/10188" style="color: #6ba1ff; font-weight: bold;">The Dashboard</a></li>
-                </ul>
-			</section>
+                        <p class="fragment fade in">**Hue devices status**</p>
+                        <p class="fragment fade in">**Heating status**</p>
+                        <p class="fragment fade in">**Estimated cost of heating**</p>
+                        <p class="fragment fade in">**Hive devices status**</p>
+                        <p class="fragment fade in">**Estimated cost of hive plugs**</p>
+                        <p class="fragment fade in">**TV status**</p>
+                    </textarea>
+                </section>
+                <section data-markdown data-background-image="assets/control.jpeg" data-background-opacity="0.3">
+                    <textarea data-template>
+                        ## Controlling everything
 
-			<section data-background-image="assets/poly.jpg" data-background-opacity="0.3">
-                <h1>What's next?</h1>
-                <p style="font-weight: bold;">More things monitored and a better Alexa skill!</p>
-                <p style="font-weight: bold;">Ideas?</p>
-                <p><a href="http://devops.skaaning.ninja" style="color: #6ba1ff; font-weight: bold;">http://devops.skaaning.ninja</a></p>
-			</section>
+                        <p>Echo devices can do it, but not with multiple hue bridges</p>
+                        <p>Multiple apps to control everything</p>
+                        <p>... so I rolled my own</p>
+                    </textarea>
+                </section>
+				<section data-markdown data-background-image="assets/explosion.jpeg" data-background-opacity="0.3">
+					<textarea data-template>
+						## Demo time
+
+					</textarea>
+				</section>
+                <section data-background-image="assets/stack.jpeg" data-background-opacity="0.3">
+                    <h1>The stack</h1>
+                    <ul>
+                        <li><a href="https://hub.docker.com/r/grafana/grafana/" style="color: #6ba1ff; font-weight: bold;">Grafana</a></li>
+                        <li><a href="https://hub.docker.com/_/influxdb/" style="color: #6ba1ff; font-weight: bold;">InfluxDB</a></li>
+                        <li><a href="https://github.com/mandalae/hive-data" style="color: #6ba1ff; font-weight: bold;">Hive Data</a></li>
+                        <li><a href="https://grafana.com/dashboards/10188" style="color: #6ba1ff; font-weight: bold;">The Dashboard</a></li>
+                        <li><a href="#" style="color: #6ba1ff; font-weight: bold;">Jarvis</a></li>
+                    </ul>
+    			</section>
+
+    			<section data-background-image="assets/poly.jpg" data-background-opacity="0.3">
+                    <h1>What's next?</h1>
+                    <p style="font-weight: bold;">Integrate the rest of my devices with Jarvis</p>
+                    <p style="font-weight: bold;">Finish Jarvis look and feel</p>
+                    <p style="font-weight: bold;">Ideas?</p>
+                    <p><a href="http://devops.skaaning.ninja" style="color: #6ba1ff; font-weight: bold;">http://devops.skaaning.ninja</a></p>
+    			</section>
 			</div>
 		</div>
 
