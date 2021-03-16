@@ -19,6 +19,6 @@ end
 
 run do
   @driver.get 'http://devops.skaaning.ninja'
-  expect(@driver.title).to eql "Monitoring and Telemetry for my Smart Home!"
+  expect(@driver.title).to eql "Making my home smarter through Technology"
   # @driver.save_screenshot('docker_image.png')
 end
